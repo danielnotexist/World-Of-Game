@@ -24,8 +24,7 @@ def guessgame():
         user_choose = int(input("please enter your guess:- "))
         if counter == tries:
             break
-    # End of the whille loop
-
+    # End of the whille loop & check if user pass the max times to tries
     if counter <= tries:
         print(f"You Did it! in {counter} Times!")
     else:
