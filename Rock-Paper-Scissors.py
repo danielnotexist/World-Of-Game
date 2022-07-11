@@ -3,6 +3,7 @@ def rockpaperscissors():
     # The user need to select from the list
     print("***** Welcome to rock paper scissors game! *****")
     user_choise = input("Please select from the list: [rock, paper, scissors]:- ").lower()
+
     # Set variables.
     possible_choise = ["rock", "paper", "scissors"]
     computer_choise = rd.choice(possible_choise)
