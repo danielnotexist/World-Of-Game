@@ -3,7 +3,7 @@ def guessgame():
     # Set variables
     counter = 1
     tries = 5
-    print("******* Welcome to GuessGame! *******")
+    print("***** Welcome to GuessGame! *****")
 
     # The user selects a start number and an end number to select the range of the target number
     start_target = int(input("Please enter the start target number of range:- "))
