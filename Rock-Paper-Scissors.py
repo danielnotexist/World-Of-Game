@@ -1,30 +1,38 @@
-import random as rd
-def rockpaperscissors():
-    # The user need to select from the list
-    print("***** Welcome to rock paper scissors game! *****")
-    user_choise = input("Please select from the list: [rock, paper, scissors]:- ").lower()
+import random
+# Set variables
+user_wins = 0
+computer_wins = 0
+options = ["rock", "paper", "scissors"]
 
-    # Set variables.
-    possible_choise = ["rock", "paper", "scissors"]
-    computer_choise = rd.choice(possible_choise)
-    print(f"you choise {user_choise}, ther computer choise {computer_choise}")
+while True:
+    user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
+    if user_input == "q":
+        break
 
-    # Check the user input and the computer inpurt and compare between them.
-    if  user_choise == computer_choise:
-        print("its tie! nobody win!")
-    elif user_choise == "rock":
-        if computer_choise == "paper":
-            print("you lose! paper cover rock!")
-        else:
-            print("you won! rock smash scissors!")
-    elif user_choise == "paper":
-        if computer_choise == "rock":
-            print("you won! paper cover rock!")
-        else:
-            print("you lose! scissors cut scissors")
-    elif user_choise == "scissor":
-        if computer_choise == "rock":
-            print("you lose! rock smash scissors!")
-        else:
-            print("you win! scissors cut paper!")
+    if user_input not in options:
+        continue
 
+    random_number = random.randint(0, 2)
+    # rock: 0, paper: 1, scissors: 2
+    computer_pick = options[random_number]
+    print("Computer picked", computer_pick + ".")
+
+    if user_input == "rock" and computer_pick == "scissors":
+        print("You won!")
+        user_wins += 1
+
+    elif user_input == "paper" and computer_pick == "rock":
+        print("You won!")
+        user_wins += 1
+
+    elif user_input == "scissors" and computer_pick == "paper":
+        print("You won!")
+        user_wins += 1
+
+    else:
+        print("You lost!")
+        computer_wins += 1
+
+print("You won", user_wins, "times.")
+print("The computer won", computer_wins, "times.")
+print("Goodbye!")
