@@ -1,7 +1,8 @@
 print("**** Hello! welcome to the World Of Game! *****")
 options = ["1", "2", "3"]
 while True:
-    print('[1] Guess the number\n'
+    print('List of games:\n'
+    '[1] Guess the number\n'
     '[2] Quiz Game\n'
     '[3] Rock Paper Scissors\n'
     '[Q] to Quit the World Of Games.')

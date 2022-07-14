@@ -32,7 +32,7 @@ def quizgame():
 
         # Question 5
         user_answer = input("What does PSU stand for? ").lower()
-        while user_answer != 'power supply':
+        while user_answer != 'power supply unit':
                 user_answer = input("Please try again:- ").lower()
         print("Currect!")
         score += 1
