@@ -5,9 +5,10 @@ while True:
         miss_days = int(input("Did you miss a few work days this month? [There are 22 working days per month]:- "))
         day_salary = global_salary / 22
         salary = day_salary * (22 - miss_days)
+        salary = int(salary)
 
 
-        print(f"you salary for this month is - {salary} shekels, you miss {miss_days} days this month")
+        print(f"you salary for this month is - {salary} shekels, and you miss {miss_days} days this month")
 
 
 
