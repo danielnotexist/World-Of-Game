@@ -1,3 +1,4 @@
+def salary_calc():
 while True:
     user_choise = input("Are you interested in calculating by the hour or globally? [global/hour]:- ")
     if user_choise == 'global':
